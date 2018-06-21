@@ -1,0 +1,541 @@
+<?xml version='1.0' encoding='utf-8'?>
+<h:html xmlns:h="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:jr="http://openrosa.org/javarosa" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>FILL THIS IN</h:title>
+    <model>
+      <instance>
+        <faims id="FILL_THIS_IN">
+          <!--START: Style-->
+          <style>
+            <orientation>
+              <orientation/>
+            </orientation>
+            <even>
+              <layout_weight/>
+            </even>
+            <large>
+              <layout_weight/>
+            </large>
+          </style>
+          <!--END: Style-->
+          <User>
+            <User>
+              <Select_User/>
+              <Login/>
+            </User>
+          </User>
+          <Control>
+            <Main>
+              <New_Cafe/>
+              <Existing_Cafes/>
+            </Main>
+            <Defaults>
+              <Next_Cafe_ID/>
+              <Next_Review_ID/>
+              <GPS_Diagnostics/>
+            </Defaults>
+            <Search>
+              <Colgroup_0>
+                <Col_0>
+                  <Search_Term/>
+                </Col_0>
+                <Col_1>
+                  <Search_Button/>
+                </Col_1>
+              </Colgroup_0>
+              <Entity_Types/>
+              <Entity_List/>
+            </Search>
+          </Control>
+          <Cafe>
+            <About_Cafe>
+              <Colgroup_1>
+                <Col_1>
+                  <Cafe_author/>
+                </Col_1>
+                <Col_2>
+                  <Cafe_timestamp/>
+                </Col_2>
+              </Colgroup_1>
+              <Colgroup_2>
+                <Col_1>
+                  <Cafe_ID/>
+                </Col_1>
+                <Col_2>
+                  <Cafe_Name/>
+                </Col_2>
+              </Colgroup_2>
+              <Colgroup_3>
+                <Col_1>
+                  <Street_Name/>
+                </Col_1>
+                <Col_2>
+                  <Street_Number/>
+                </Col_2>
+              </Colgroup_3>
+              <Colgroup_4>
+                <Col_1>
+                  <City/>
+                </Col_1>
+                <Col_2>
+                  <State/>
+                </Col_2>
+              </Colgroup_4>
+              <Colgroup_5>
+                <Col_1>
+                  <Latitude/>
+                </Col_1>
+                <Col_2>
+                  <Longitude/>
+                </Col_2>
+              </Colgroup_5>
+              <Colgroup_6>
+                <Col_1>
+                  <Northing/>
+                </Col_1>
+                <Col_2>
+                  <Easting/>
+                </Col_2>
+                <Col_3>
+                  <Accuracy/>
+                </Col_3>
+              </Colgroup_6>
+              <Take_From_GPS_1/>
+              <Take_Representative_Photo_of_the_Cafe/>
+              <Take_Representative_Photo_of_the_Cafe_Button_1/>
+              <Colgroup_7>
+                <Col_1>
+                  <Opening_Hours_Weekday/>
+                </Col_1>
+                <Col_2>
+                  <Opening_Hours_Weekend/>
+                </Col_2>
+              </Colgroup_7>
+              <Contact/>
+            </About_Cafe>
+            <Coffee_Review>
+              <Add_Review/>
+              <Existing_Reviews/>
+            </Coffee_Review>
+          </Cafe>
+          <Coffee>
+            <Review>
+              <Colgroup_1>
+                <Col_1>
+                  <Review_ID/>
+                </Col_1>
+                <Col_2>
+                  <Cafe_Name_Review/>
+                </Col_2>
+              </Colgroup_1>
+              <Colgroup_2>
+                <Col_1>
+                  <Coffee_author/>
+                </Col_1>
+                <Col_2>
+                  <Coffee_timestamp/>
+                </Col_2>
+              </Colgroup_2>
+              <Colgroup_3>
+                <Col_1>
+                  <Coffee_Beans/>
+                </Col_1>
+                <Col_2>
+                  <Coffee_Roastery/>
+                </Col_2>
+              </Colgroup_3>
+              <Colgroup_4>
+                <Col_1>
+                  <Coffee_Traditional/>
+                </Col_1>
+                <Col_2>
+                  <Coffee_Alternative/>
+                </Col_2>
+              </Colgroup_4>
+              <Coffee_Rating/>
+              <Coffee_Comments/>
+              <Revisit_Recommendations/>
+              <Take_Coffee_Photo/>
+              <Take_Coffee_Photo_Button_1/>
+              <Choose_Photo_from_Device/>
+              <Choose_Photo_from_Device_Button_1/>
+            </Review>
+          </Coffee>
+        </faims>
+      </instance>
+      <bind nodeset="/faims/Control/Defaults/Next_Cafe_ID" type="decimal"/>
+      <bind nodeset="/faims/Control/Defaults/Next_Review_ID" type="decimal"/>
+      <bind nodeset="/faims/Cafe/About_Cafe/Colgroup_3/Col_2/Street_Number" type="decimal"/>
+    </model>
+  </h:head>
+  <h:body>
+    <!--START: Style-->
+    <group ref="style">
+      <label/>
+      <group ref="orientation">
+        <label/>
+        <input ref="orientation">
+          <label>horizontal</label>
+        </input>
+      </group>
+      <group ref="even">
+        <label/>
+        <input ref="layout_weight">
+          <label>1</label>
+        </input>
+      </group>
+      <group ref="large">
+        <label/>
+        <input ref="layout_weight">
+          <label>3</label>
+        </input>
+      </group>
+    </group>
+    <!--END: Style-->
+    <group ref="User">
+      <label>{User}</label>
+      <group ref="User" faims_scrollable="false">
+        <label>{User}</label>
+        <select1 appearance="compact" ref="Select_User">
+          <label>{Select_User}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select1>
+        <trigger ref="Login">
+          <label>{Login}</label>
+        </trigger>
+      </group>
+    </group>
+    <group ref="Control">
+      <label>{Control}</label>
+      <group ref="Main" faims_scrollable="false">
+        <label>{Main}</label>
+        <trigger ref="New_Cafe">
+          <label>{New_Cafe}</label>
+        </trigger>
+        <select1 appearance="compact" ref="Existing_Cafes">
+          <label>{Existing_Cafes}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select1>
+      </group>
+      <group ref="Defaults">
+        <label>{Defaults}</label>
+        <input ref="Next_Cafe_ID" faims_style_class="required">
+          <label>{Next_Cafe_ID}</label>
+        </input>
+        <input ref="Next_Review_ID" faims_style_class="required">
+          <label>{Next_Review_ID}</label>
+        </input>
+        <input faims_read_only="true" ref="GPS_Diagnostics">
+          <label>{GPS_Diagnostics}</label>
+        </input>
+      </group>
+      <group ref="Search" faims_scrollable="false">
+        <label>{Search}</label>
+        <group ref="Colgroup_0" faims_style="orientation">
+          <label/>
+          <group ref="Col_0" faims_style="even">
+            <label/>
+            <input ref="Search_Term">
+              <label>{Search_Term}</label>
+            </input>
+          </group>
+          <group ref="Col_1" faims_style="large">
+            <label/>
+            <trigger ref="Search_Button">
+              <label>{Search}</label>
+            </trigger>
+          </group>
+        </group>
+        <select1 ref="Entity_Types">
+          <label>{Entity_Types}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select1>
+        <select1 appearance="compact" ref="Entity_List">
+          <label>{Entity_List}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select1>
+      </group>
+    </group>
+    <group ref="Cafe" faims_archent_type="Cafe">
+      <label>{Cafe}</label>
+      <group ref="About_Cafe">
+        <label>{About_Cafe}</label>
+        <group ref="Colgroup_1" faims_style="orientation">
+          <label/>
+          <group ref="Col_1" faims_style="even">
+            <label/>
+            <input faims_attribute_name="Cafe author" faims_attribute_type="measure" ref="Cafe_author" faims_read_only="true">
+              <label>{Created_by}</label>
+            </input>
+          </group>
+          <group ref="Col_2" faims_style="even">
+            <label/>
+            <input faims_attribute_name="Cafe timestamp" faims_attribute_type="measure" ref="Cafe_timestamp" faims_read_only="true">
+              <label>{Created_at}</label>
+            </input>
+          </group>
+        </group>
+        <group ref="Colgroup_2" faims_style="orientation">
+          <label/>
+          <group ref="Col_1" faims_style="even">
+            <label/>
+            <input faims_attribute_name="Cafe ID" faims_attribute_type="measure" ref="Cafe_ID" faims_style_class="required">
+              <label>{Cafe_ID}</label>
+            </input>
+          </group>
+          <group ref="Col_2" faims_style="even">
+            <label/>
+            <input faims_attribute_name="Cafe Name" faims_attribute_type="measure" ref="Cafe_Name" faims_style_class="required">
+              <label>{Cafe_Name}</label>
+            </input>
+          </group>
+        </group>
+        <group ref="Colgroup_3" faims_style="orientation">
+          <label/>
+          <group ref="Col_1" faims_style="even">
+            <label/>
+            <input faims_attribute_name="Street Name" faims_attribute_type="measure" ref="Street_Name" faims_style_class="required">
+              <label>{Street_Name}</label>
+            </input>
+          </group>
+          <group ref="Col_2" faims_style="even">
+            <label/>
+            <input faims_attribute_name="Street Number" faims_attribute_type="measure" ref="Street_Number" faims_style_class="required">
+              <label>{Street_Number}</label>
+            </input>
+          </group>
+        </group>
+        <group ref="Colgroup_4" faims_style="orientation">
+          <label/>
+          <group ref="Col_1" faims_style="even">
+            <label/>
+            <input faims_attribute_name="City" faims_attribute_type="measure" ref="City" faims_style_class="required">
+              <label>{City}</label>
+            </input>
+          </group>
+          <group ref="Col_2" faims_style="even">
+            <label/>
+            <input faims_attribute_name="State" faims_attribute_type="measure" ref="State">
+              <label>{State}</label>
+            </input>
+          </group>
+        </group>
+        <group ref="Colgroup_5" faims_style="orientation">
+          <label/>
+          <group ref="Col_1" faims_style="even">
+            <label/>
+            <input faims_attribute_name="Latitude" faims_attribute_type="measure" ref="Latitude" faims_read_only="true">
+              <label>{Latitude}</label>
+            </input>
+          </group>
+          <group ref="Col_2" faims_style="even">
+            <label/>
+            <input faims_attribute_name="Longitude" faims_attribute_type="measure" ref="Longitude" faims_read_only="true">
+              <label>{Longitude}</label>
+            </input>
+          </group>
+        </group>
+        <group ref="Colgroup_6" faims_style="orientation">
+          <label/>
+          <group ref="Col_1" faims_style="even">
+            <label/>
+            <input faims_attribute_name="Northing" faims_attribute_type="measure" ref="Northing" faims_read_only="true">
+              <label>{Northing}</label>
+            </input>
+          </group>
+          <group ref="Col_2" faims_style="even">
+            <label/>
+            <input faims_attribute_name="Easting" faims_attribute_type="measure" ref="Easting" faims_read_only="true">
+              <label>{Easting}</label>
+            </input>
+          </group>
+          <group ref="Col_3" faims_style="even">
+            <label/>
+            <input faims_attribute_name="Accuracy" faims_attribute_type="measure" ref="Accuracy" faims_read_only="true">
+              <label>{Accuracy}</label>
+            </input>
+          </group>
+        </group>
+        <trigger ref="Take_From_GPS_1">
+          <label>{Take_From_GPS}</label>
+        </trigger>
+        <select faims_sync="true" type="camera" faims_attribute_name="Take Representative Photo of the Cafe" faims_attribute_type="measure" ref="Take_Representative_Photo_of_the_Cafe">
+          <label>{Take_Representative_Photo_of_the_Cafe}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select>
+        <trigger ref="Take_Representative_Photo_of_the_Cafe_Button_1">
+          <label>{Take_Representative_Photo_of_the_Cafe}</label>
+        </trigger>
+        <group ref="Colgroup_7" faims_style="orientation">
+          <label/>
+          <group ref="Col_1" faims_style="even">
+            <label/>
+            <select faims_attribute_name="Opening Hours Weekday" faims_attribute_type="vocab" ref="Opening_Hours_Weekday">
+              <label>{Opening_Hours_Weekday}</label>
+              <item>
+                <label>Options not loaded</label>
+                <value>Options not loaded</value>
+              </item>
+            </select>
+          </group>
+          <group ref="Col_2" faims_style="even">
+            <label/>
+            <select faims_attribute_name="Opening Hours Weekend" faims_attribute_type="vocab" ref="Opening_Hours_Weekend">
+              <label>{Opening_Hours_Weekend}</label>
+              <item>
+                <label>Options not loaded</label>
+                <value>Options not loaded</value>
+              </item>
+            </select>
+          </group>
+        </group>
+        <input faims_attribute_name="Contact" faims_attribute_type="measure" ref="Contact">
+          <label>{Contact}</label>
+        </input>
+      </group>
+      <group ref="Coffee_Review" faims_scrollable="false">
+        <label>{Coffee_Review}</label>
+        <trigger ref="Add_Review">
+          <label>{Add_Review}</label>
+        </trigger>
+        <select1 appearance="compact" ref="Existing_Reviews">
+          <label>{Existing_Reviews}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select1>
+      </group>
+    </group>
+    <group ref="Coffee" faims_archent_type="Coffee">
+      <label>{Coffee}</label>
+      <group ref="Review">
+        <label>{Review}</label>
+        <group ref="Colgroup_1" faims_style="orientation">
+          <label/>
+          <group ref="Col_1" faims_style="even">
+            <label/>
+            <input faims_attribute_name="Review ID" faims_attribute_type="measure" ref="Review_ID" faims_style_class="required">
+              <label>{Review_ID}</label>
+            </input>
+          </group>
+          <group ref="Col_2" faims_style="even">
+            <label/>
+            <input faims_attribute_name="Cafe Name Review" faims_attribute_type="measure" ref="Cafe_Name_Review" faims_style_class="required">
+              <label>{Cafe_Name_Review}</label>
+            </input>
+          </group>
+        </group>
+        <group ref="Colgroup_2" faims_style="orientation">
+          <label/>
+          <group ref="Col_1" faims_style="even">
+            <label/>
+            <input faims_attribute_name="Coffee author" faims_attribute_type="measure" ref="Coffee_author" faims_read_only="true">
+              <label>{Created_by}</label>
+            </input>
+          </group>
+          <group ref="Col_2" faims_style="even">
+            <label/>
+            <input faims_attribute_name="Coffee timestamp" faims_attribute_type="measure" ref="Coffee_timestamp" faims_read_only="true">
+              <label>{Created_at}</label>
+            </input>
+          </group>
+        </group>
+        <group ref="Colgroup_3" faims_style="orientation">
+          <label/>
+          <group ref="Col_1" faims_style="even">
+            <label/>
+            <select1 faims_attribute_name="Coffee Beans" faims_attribute_type="vocab" ref="Coffee_Beans">
+              <label>{Coffee_Beans}</label>
+              <item>
+                <label>Options not loaded</label>
+                <value>Options not loaded</value>
+              </item>
+            </select1>
+          </group>
+          <group ref="Col_2" faims_style="even">
+            <label/>
+            <input faims_attribute_name="Coffee Roastery" faims_attribute_type="measure" ref="Coffee_Roastery">
+              <label>{Coffee_Roastery}</label>
+            </input>
+          </group>
+        </group>
+        <group ref="Colgroup_4" faims_style="orientation">
+          <label/>
+          <group ref="Col_1" faims_style="even">
+            <label/>
+            <select faims_attribute_name="Coffee Traditional" faims_attribute_type="vocab" ref="Coffee_Traditional">
+              <label>{Traditional_Espresso_based_Coffee}</label>
+              <item>
+                <label>Options not loaded</label>
+                <value>Options not loaded</value>
+              </item>
+            </select>
+          </group>
+          <group ref="Col_2" faims_style="even">
+            <label/>
+            <select faims_attribute_name="Coffee Alternative" faims_attribute_type="vocab" ref="Coffee_Alternative">
+              <label>{Alternative_Brewing_styles}</label>
+              <item>
+                <label>Options not loaded</label>
+                <value>Options not loaded</value>
+              </item>
+            </select>
+          </group>
+        </group>
+        <select1 appearance="full" faims_attribute_name="Coffee Rating" faims_attribute_type="vocab" ref="Coffee_Rating" faims_style_class="required">
+          <label>{Coffee_Rating__1___worst__5___best_}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select1>
+        <input faims_attribute_name="Coffee Comments" faims_attribute_type="measure" ref="Coffee_Comments">
+          <label>{Coffee_Comments}</label>
+        </input>
+        <select1 appearance="full" faims_attribute_name="Revisit Recommendations" faims_attribute_type="vocab" ref="Revisit_Recommendations">
+          <label>{Would_you_like_to_come_back_}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select1>
+        <select faims_sync="true" type="camera" faims_attribute_name="Take Coffee Photo" faims_attribute_type="measure" ref="Take_Coffee_Photo">
+          <label>{Take_Coffee_Photo}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select>
+        <trigger ref="Take_Coffee_Photo_Button_1">
+          <label>{Take_Coffee_Photo}</label>
+        </trigger>
+        <select faims_sync="true" type="file" faims_attribute_name="Choose Photo from Device" faims_attribute_type="measure" ref="Choose_Photo_from_Device">
+          <label>{Choose_Photo_from_Device}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select>
+        <trigger ref="Choose_Photo_from_Device_Button_1">
+          <label>{Choose_Photo_from_Device}</label>
+        </trigger>
+      </group>
+    </group>
+  </h:body>
+</h:html>

@@ -1,0 +1,314 @@
+<?xml version='1.0' encoding='utf-8'?>
+<dataSchema>
+  <RelationshipElement name="Cafe - Coffee" type="hierarchical">
+    <description>A 1-to-n relationship between the parent and its children, respectively.</description>
+    <parent>Parent Of</parent>
+    <child>Child Of</child>
+  </RelationshipElement>
+  <ArchaeologicalElement name="Cafe">
+    <description></description>
+    <property name="Cafe ID" type="measure" isIdentifier="true">
+      <description>Cafe's unique ID number, autoincremented by 1</description>
+      <formatString>$2</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="Cafe Name" type="measure" isIdentifier="true">
+      <description>Name of the Cafe, as seen above / near the main entrance, inside the cafe or on the menu.</description>
+      <formatString>-$2</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="Street Name" type="measure" isIdentifier="true">
+      <description>Enter Street name e.g. Clarence Street.</description>
+      <formatString>-$2</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="Cafe author" type="measure">
+      <description></description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="Cafe timestamp" type="measure">
+      <description></description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="Street Number" type="measure">
+      <description>Enter Street number.</description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="City" type="measure">
+      <description>Enter name of the City.</description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="State" type="measure">
+      <description>Enter name of the State.</description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="Latitude" type="measure">
+      <description></description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="Longitude" type="measure">
+      <description></description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="Northing" type="measure">
+      <description></description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="Easting" type="measure">
+      <description></description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="Accuracy" type="measure">
+      <description></description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="Take Representative Photo of the Cafe" type="file" file="true" thumbnail="true">
+      <description>Photo of Cafe</description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="Opening Hours Weekday" type="vocab">
+      <description>Check all the hours of the day when the Cafe is open during a regular weekday, using 24h format</description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+      <lookup>
+        <term>{6_00}
+<description> </description></term>
+        <term>{7_00}
+<description> </description></term>
+        <term>{8_00}
+<description> </description></term>
+        <term>{9_00}
+<description> </description></term>
+        <term>{10_00}
+<description> </description></term>
+        <term>{11_00}
+<description> </description></term>
+        <term>{12_00}
+<description> </description></term>
+        <term>{13_00}
+<description> </description></term>
+        <term>{14_00}
+<description> </description></term>
+        <term>{15_00}
+<description> </description></term>
+        <term>{16_00}
+<description> </description></term>
+        <term>{17_00}
+<description> </description></term>
+        <term>{18_00}
+<description> </description></term>
+        <term>{19_00}
+<description> </description></term>
+        <term>{20_00}
+<description> </description></term>
+      </lookup>
+    </property>
+    <property name="Opening Hours Weekend" type="vocab">
+      <description>Check all the hours of the day when the Cafe is open during a regular weekend, using 24h format</description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+      <lookup>
+        <term>{6_00}
+<description> </description></term>
+        <term>{7_00}
+<description> </description></term>
+        <term>{8_00}
+<description> </description></term>
+        <term>{9_00}
+<description> </description></term>
+        <term>{10_00}
+<description> </description></term>
+        <term>{11_00}
+<description> </description></term>
+        <term>{12_00}
+<description> </description></term>
+        <term>{13_00}
+<description> </description></term>
+        <term>{14_00}
+<description> </description></term>
+        <term>{15_00}
+<description> </description></term>
+        <term>{16_00}
+<description> </description></term>
+        <term>{17_00}
+<description> </description></term>
+        <term>{18_00}
+<description> </description></term>
+        <term>{19_00}
+<description> </description></term>
+        <term>{20_00}
+<description> </description></term>
+      </lookup>
+    </property>
+    <property name="Contact" type="measure">
+      <description>Write down a telephone number, website, Twitter account, Facebook page or any other mean of contact.</description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+  </ArchaeologicalElement>
+  <ArchaeologicalElement name="Coffee">
+    <description></description>
+    <property name="Cafe Name Review" type="measure" isIdentifier="true">
+      <description></description>
+      <formatString>$2</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="Review ID" type="measure" isIdentifier="true">
+      <description>Review's unique ID, autoincremented by 1</description>
+      <formatString>-$2</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="Coffee Rating" type="vocab" isIdentifier="true">
+      <description>Rate the overall experience of ordered coffee: 1 - undrinkable; 5 - the best coffee of my life.</description>
+      <formatString> R: $1</formatString>
+      <appendCharacterString> - </appendCharacterString>
+      <lookup>
+        <term>{1}
+<description> </description></term>
+        <term>{1_5}
+<description> </description></term>
+        <term>{2}
+<description> </description></term>
+        <term>{2_5}
+<description> </description></term>
+        <term>{3}
+<description> </description></term>
+        <term>{3_5}
+<description> </description></term>
+        <term>{4}
+<description> </description></term>
+        <term>{4_5}
+<description> </description></term>
+        <term>{5}
+<description> </description></term>
+      </lookup>
+    </property>
+    <property name="Coffee author" type="measure">
+      <description></description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="Coffee timestamp" type="measure">
+      <description></description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="Coffee Beans" type="vocab">
+      <description>Origin of used coffee beans.</description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+      <lookup>
+        <term>{Brazil}
+<description> </description></term>
+        <term>{Colombia}
+<description> </description></term>
+        <term>{Costa_Rica}
+<description> </description></term>
+        <term>{Guatemala}
+<description> </description></term>
+        <term>{Ethiopia}
+<description> </description></term>
+        <term>{Honduras}
+<description> </description></term>
+        <term>{Indonesia}
+<description> </description></term>
+        <term>{Kenya}
+<description> </description></term>
+        <term>{Vietnam}
+<description> </description></term>
+        <term>{Venezuela}
+<description> </description></term>
+        <term>{Other}
+<description> </description></term>
+      </lookup>
+    </property>
+    <property name="Coffee Roastery" type="measure">
+      <description>Name of the roastery.</description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="Coffee Traditional" type="vocab">
+      <description>Choose the type of the traditional-style coffee you have ordered.</description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+      <lookup>
+        <term>{Americano}
+<description>Americano style coffee is made with espresso (one or several shots), with hot water then added to give a similar strength (but different flavor) to drip-brewed coffee.</description></term>
+        <term>{Cappuccino}
+<description>Cappuccino comprises equal parts of espresso coffee and milk and froth, sometimes sprinkled with cinnamon or powdered cocoa.</description></term>
+        <term>{Flat_White}
+<description>Flat white is one part espresso with two parts steamed milk, usually served in a cappuccino cup with the foam decorated with a motif (e.g., fern or heart). This is a speciality of Australia and New Zealand.</description></term>
+        <term>{Latte}
+<description>Caffè latte or caffè e latte is often called simply latte, which is Italian for ""milk"", in English-speaking countries; it is espresso with steamed milk, traditionally topped with froth created from steaming the milk. A latte comprises one-third espresso and nearly two-thirds steamed milk. More frothed milk makes it weaker than a cappuccino.</description></term>
+        <term>{Long_Black}
+<description>Long black is similar to Americano, but prepared in different order (a double shot of espresso is added to water instead of vice versa); most common in Australia and New Zealand.</description></term>
+        <term>{Mocha}
+<description>Mocha is a latte with chocolate added.</description></term>
+        <term>{Other}
+<description> </description></term>
+      </lookup>
+    </property>
+    <property name="Coffee Alternative" type="vocab">
+      <description>Choose the type of alternative brewing style coffee you have ordered.</description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+      <lookup>
+        <term>{Aeropress}
+<description>The AeroPress is a mechanical, non-electronic device where pressure is simply exerted by the user manually pressing a piston down with their hand, forcing medium-temperature water through coffee grounds in about 30 seconds (into a single cup.) This method produces a smoother beverage than espresso, falling somewhere between the flavor of a moka pot and a French Press.</description></term>
+        <term>{Batchbrew}
+<description>Very similar in taste and quality to Drip / Pourover coffee, but made in large quantities rather than one serving at the time.</description></term>
+        <term>{Cold_Brew}
+<description>Cold brew coffee, sometimes known as "cold press." Cold water is poured over coffee grounds and allowed to steep for eight to twenty-four hours. The coffee is then filtered, usually through a very thick filter, removing all particles. This process produces a very strong concentrate which can be stored in a refrigerated, airtight container for up to eight weeks. The coffee prepared by this method is very low in acidity with a smooth taste, and is often preferred by those with sensitive stomachs. Others, however, feel this method strips coffee of its bold flavor and character. </description></term>
+        <term>{Drip_or_Pourover}
+<description>Drip brewing, filtered coffee, or pour-over is a method which involves pouring water over roasted, ground coffee beans contained in a filter, creating the beverage called coffee. Water seeps through the ground coffee, absorbing its oils and essences, solely under gravity, then passes through the bottom of the filter. The used coffee grounds are retained in the filter with the liquid falling (dripping) into a collecting vessel such as a carafe or pot.</description></term>
+        <term>{French_Press}
+<description>The French press goes by various names around the world. In Italy the press is known as a caffettiera a stantuffo. A French press requires coffee of a coarser grind than does a drip brew coffee filter, as finer grounds, when immersed in water, have lower permeability than coarser grounds, requiring an excessive and potentially dangerous amount of force to be applied by hand to lower the plunger. It is widely believed that the optimum time for brewing the coffee is around 4 minutes. Others consider the coffee spoiled after about 20 minutes. Other approaches, such as cold-brewing, require several hours of contact between the water and the grounds to achieve the desired extraction.</description></term>
+        <term>{Moka_Pot}
+<description> The moka pot, also known as the "Italian coffeepot" or the "caffettiera" is a three-chamber design which boils water in the lower section. The generated steam pressure, about one bar (100 kPa, 14.5 psi), forces the boiling water up through coffee grounds held in the middle section, separated by a filter mesh from the top section. The resultant coffee (almost espresso strength, but without the crema) is collected in the top section. Moka pots usually sit directly on a stovetop heater or burner. Some models have a transparent glass or plastic top.</description></term>
+        <term>{Vacuum_Pot}
+<description> A vacuum coffee maker brews coffee using two chambers where vapor pressure and vacuum produce coffee. A vacuum coffee maker operates as a siphon, where heating and cooling the lower vessel changes the vapor pressure of water in the lower, first pushing the water up into the upper vessel, then allowing the water to fall back down into the lower vessel. Concretely, the principle of a vacuum coffee maker is to heat water in the lower vessel of the brewer until expansion forces the contents through a narrow tube into an upper vessel containing coffee grounds (as water temperature increases, dense liquid water increasingly converts to less dense water vapor gas, which takes up more space and thus increases pressure); when the water reaches and exceeds the boiling point (so the vapor pressure equals and then exceeds atmospheric pressure), the (water vapor) pressure in the lower vessel exceeds the (atmospheric) pressure in the top vessel and water is pushed up the siphon tube into the upper vessel."</description></term>
+        <term>{Other}
+<description> </description></term>
+      </lookup>
+    </property>
+    <property name="Coffee Comments" type="measure">
+      <description>Comment on the coffee.</description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="Revisit Recommendations" type="vocab">
+      <description>Would you like to come back?</description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+      <lookup>
+        <term>{Yes}
+<description> </description></term>
+        <term>{Maybe}
+<description> </description></term>
+        <term>{No}
+<description> </description></term>
+      </lookup>
+    </property>
+    <property name="Take Coffee Photo" type="file" file="true" thumbnail="true">
+      <description>Take Picture of the ordered coffee.</description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+    <property name="Choose Photo from Device" type="file" file="true" thumbnail="true">
+      <description>Choose Photo from Device, using external apps. First you have to navigate to the folder where the file you want to attach lives and then attach it.</description>
+      <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
+  </ArchaeologicalElement>
+</dataSchema>
