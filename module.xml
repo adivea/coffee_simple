@@ -2,8 +2,8 @@
 <module suppressWarnings="true">
 
 <User f="nodata">
-    <User f="noscroll">
-        <Select_User t="list" f="user"/>
+    <User>
+        <Select_User t="dropdown" f="user"/>
         <Login t="button" l="Control"/>
     </User>
 </User>
@@ -114,7 +114,7 @@
 </Cafe>
 
 <Coffee>
-    <fmt>{{Cafe_Name_Review}}-{{Review_ID}} R: {{Coffee_Rating}}</fmt>
+    <fmt>{{Cafe_Name_Review}}-{{timestamp}}: {{Coffee_Rating}}</fmt>
     <Review>
         <cols>
             <Review_ID f="notnull autonum">

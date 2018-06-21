@@ -314,7 +314,7 @@ HashSet NOAUTOSAVE_TAB_GROUPS_AS_HASH_SET = null;
 NODATA_TAB_GROUPS.add("User");
 NODATA_TAB_GROUPS.add("Control");
 
-REF_TO_TYPE.put("User/User/Select_User", "list");
+REF_TO_TYPE.put("User/User/Select_User", "dropdown");
 REF_TO_TYPE.put("User/User/Login", "button");
 REF_TO_TYPE.put("Control/Main/New_Cafe", "button");
 REF_TO_TYPE.put("Control/Main/Existing_Cafes", "list");
@@ -3051,7 +3051,7 @@ void populateListForUsers(){
 }
 
 String getUserMenuValue(int i) {
-  String selectedUser = getListItemValue();
+  String selectedUser = getFieldValue(USER_MENU_PATH);
   if (selectedUser == null)
     return "";
 

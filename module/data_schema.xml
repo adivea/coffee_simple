@@ -164,14 +164,14 @@
       <formatString>$2</formatString>
       <appendCharacterString> - </appendCharacterString>
     </property>
-    <property name="Review ID" type="measure" isIdentifier="true">
-      <description>Review's unique ID, autoincremented by 1</description>
+    <property name="Coffee timestamp" type="measure" isIdentifier="true">
+      <description></description>
       <formatString>-$2</formatString>
       <appendCharacterString> - </appendCharacterString>
     </property>
     <property name="Coffee Rating" type="vocab" isIdentifier="true">
       <description>Rate the overall experience of ordered coffee: 1 - undrinkable; 5 - the best coffee of my life.</description>
-      <formatString> R: $1</formatString>
+      <formatString>: $1</formatString>
       <appendCharacterString> - </appendCharacterString>
       <lookup>
         <term>{1}
@@ -194,12 +194,12 @@
 <description> </description></term>
       </lookup>
     </property>
-    <property name="Coffee author" type="measure">
-      <description></description>
+    <property name="Review ID" type="measure">
+      <description>Review's unique ID, autoincremented by 1</description>
       <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
       <appendCharacterString> - </appendCharacterString>
     </property>
-    <property name="Coffee timestamp" type="measure">
+    <property name="Coffee author" type="measure">
       <description></description>
       <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
       <appendCharacterString> - </appendCharacterString>
